@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.13)
+
+project(MCP9600)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+#set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
+#add_library(MCP9600 MCP9600.c)
+#if(NOT DEFINED ENV{CMAKE_EXPORT_COMPILE_COMMANDS})
+#    message("ENV(CMAKE_EXPORT_COMPILE_COMMANDS) NOT DEFINED")
+#    set($ENV{CMAKE_EXPORT_COMPILE_COMMANDS} TRUE)
+#endif()
+
+#if(NOT DEFINED CMAKE_EXPORT_COMPILE_COMMANDS AND
+#   NOT DEFINED ENV{CMAKE_EXPORT_COMPILE_COMMANDS} AND
+#   CMAKE_GENERATOR MATCHES "Ninja|Unix Makefiles")
+#  set(CMAKE_EXPORT_COMPILE_COMMANDS "ON"
+#      CACHE BOOL "Enable/Disable output of compile commands during generation.")
+#  mark_as_advanced(CMAKE_EXPORT_COMPILE_COMMANDS)
+#endif()
+
+#project(MCP9600)
+
+#add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/src/)
+
+set(SOURCE_FILES
+    "${CMAKE_CURRENT_LIST_DIR}/src/MCP9600.c"
+    )
+
+register_fprime_module()

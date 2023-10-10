@@ -1,0 +1,3 @@
+#!/home/noahbraasch/WALI/PEP-GS-Flight-Software/PEP-GS-VENV/bin/python3
+from Cheetah.CheetahWrapper import _cheetah
+_cheetah()
